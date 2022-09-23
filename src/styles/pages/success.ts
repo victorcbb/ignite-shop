@@ -11,6 +11,7 @@ export const SuccessContainer = styled("main", {
   h1: {
     fontSize: "$2xl",
     color: "$gray100",
+    margin: "0 auto 1.5rem",
   },
 
   p: {
@@ -37,21 +38,31 @@ export const SuccessContainer = styled("main", {
   }
 })
 
-export const ImageContainer = styled("main", {
-  width: "100%",
-  maxWidth: "8.125rem",
-  height: "9.0625rem",
+export const ImagesContainer = styled("section", {
+  display: "flex",
+  alignItems: "center",
+  marginBottom: "3rem",
+
+  "div + div": {
+    marginLeft: "-3.25rem"
+  }
+})
+
+export const ImageContainer = styled("div", {
+  Width: "8.75rem",
+  height: "8.75rem",
 
   background: "linear-gradient(180deg, #1ea483 0%, #7465d4 100%)",
-  borderRadius: 8,
+  boxShadow: "-4px 0px 16px rgba(0, 0, 0, 0.8)",
+  borderRadius: "50%",
   
-  padding: "0.25rem",
-  marginTop: "4rem",
-  marginBottom: "2rem",
+  padding: "0.75rem",
 
   display: "flex",
   alignItems: "center",
   justifyContent: "center",
+
+  position: "relative",
 
   img: {
     objectFit: "cover",
